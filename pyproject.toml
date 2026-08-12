@@ -1,0 +1,17 @@
+[project]
+name = "xinghai-enterprise-agent"
+version = "0.1.0"
+description = "A beginner-friendly enterprise knowledge and office agent built with LangChain"
+requires-python = ">=3.11,<3.14"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

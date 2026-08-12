@@ -1,0 +1,33 @@
+app:
+  name: "星海智联 · 企业知识助手"
+  environment: "development"
+  demo_mode: true
+  max_input_chars: 6000
+llm:
+  provider: "openai"
+  model: "gpt-5.4-mini"
+  temperature: 0.1
+  max_iterations: 6
+  base_url: null
+embedding:
+  provider: "hash"
+  model: "BAAI/bge-small-zh-v1.5"
+  dimensions: 384
+rag:
+  knowledge_base_dir: "data/knowledge_base"
+  vector_store_path: "data/vector_store/index.json"
+  chunk_size: 800
+  chunk_overlap: 120
+  retrieval_top_k: 8
+  rerank_top_n: 4
+  minimum_score: 0.05
+memory:
+  max_messages: 12
+  max_characters: 12000
+security:
+  mask_pii_in_logs: true
+  block_prompt_injection: false
+  require_confirmation_for_high_risk_tools: true
+web_search:
+  provider: "tavily"
+  timeout_seconds: 15

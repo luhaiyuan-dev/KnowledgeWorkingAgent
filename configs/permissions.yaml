@@ -1,0 +1,28 @@
+roles:
+  guest:
+    tools:
+      - calculator
+      - knowledge_base_search
+    document_scopes:
+      - public
+  employee:
+    tools:
+      - calculator
+      - knowledge_base_search
+      - file_reader
+      - data_query
+      - web_search
+      - document_analysis
+    document_scopes:
+      - public
+      - internal
+  admin:
+    tools:
+      - "*"
+    document_scopes:
+      - "*"
+high_risk_tools:
+  - crm_write
+  - erp_write
+  - email_send
+  - calendar_create

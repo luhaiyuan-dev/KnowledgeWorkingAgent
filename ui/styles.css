@@ -1,0 +1,130 @@
+:root {
+  --xh-navy: #071b47;
+  --xh-blue: #2f76e8;
+  --xh-blue-soft: #edf4ff;
+  --xh-surface: #ffffff;
+  --xh-panel: #f7f9fc;
+  --xh-border: #dce3ed;
+  --xh-muted: #66758c;
+}
+
+.stApp {
+  background: var(--xh-surface);
+  color: var(--xh-navy);
+}
+
+[data-testid="stHeader"] {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--xh-border);
+}
+
+[data-testid="stToolbar"] {
+  display: none;
+}
+
+[data-testid="stSidebar"] {
+  background: var(--xh-panel);
+  border-right: 1px solid var(--xh-border);
+}
+
+[data-testid="stSidebar"] button[kind="primary"] {
+  width: 100%;
+}
+
+.block-container {
+  max-width: 1180px;
+  padding-top: 1.4rem;
+  padding-bottom: 7rem;
+}
+
+.xh-title {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.25rem;
+}
+
+.xh-brand-mark {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--xh-navy);
+  color: white;
+  font-size: 18px;
+}
+
+.xh-title h1 {
+  color: var(--xh-navy);
+  font-size: 1.55rem;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.xh-status {
+  color: var(--xh-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1.6rem;
+}
+
+.xh-status::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #19a66a;
+}
+
+[data-testid="stChatMessage"] {
+  border: 0;
+  padding: 0.75rem 0;
+}
+
+[data-testid="stChatMessageAvatarAssistant"] {
+  background: var(--xh-navy);
+  color: white;
+}
+
+[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"] {
+  font-size: 0.96rem;
+  line-height: 1.8;
+}
+
+[data-testid="stChatInput"] {
+  border: 1px solid var(--xh-border);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(25, 55, 100, 0.08);
+}
+
+.xh-source {
+  border-left: 3px solid var(--xh-blue);
+  background: var(--xh-panel);
+  padding: 0.7rem 0.85rem;
+  margin-bottom: 0.65rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.86rem;
+}
+
+.xh-source strong {
+  color: var(--xh-navy);
+}
+
+.xh-source small {
+  color: var(--xh-muted);
+}
+
+button[kind="primary"] {
+  background: var(--xh-blue);
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  .block-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
